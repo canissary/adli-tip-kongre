@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Türkiye ve yurt dışındaki adli tıp, adli bilimler ve sağlık hukuku kongre, sempozyum ve atölyeleri. Haftalık güncellenir.">
+<title>Adli Tıp Kongre Takvimi</title>
+<link rel="alternate" type="application/rss+xml" title="Adli Tıp Kongre Takvimi" href="feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Libre+Franklin:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column like a case register — summary strip of deadlines, filters, then month-grouped dossier entries with an evidence-tag date block on the left. */
+:root{
+  --paper:#f6f7f5; --card:#ffffff; --ink:#18232b; --muted:#5c6a72; --rule:#d8dedc;
+  --accent:#1f5f6b; --accent-soft:#e1eeef; --tag:#b7791f; --tag-soft:#fbf0dc;
+  --warn:#b4432c; --warn-soft:#fbe6e0; --ok:#2f7a4d; --ok-soft:#e2f2e7;
+  --display:"Spectral",Georgia,serif; --body:"Libre Franklin",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#11181c; --card:#18222a; --ink:#e4ebec; --muted:#97a6ad; --rule:#2b3840;
+  --accent:#6fb7c2; --accent-soft:#1d3238; --tag:#e3a84a; --tag-soft:#3a2d16;
+  --warn:#ef8a72; --warn-soft:#3d221c; --ok:#7cc79a; --ok-soft:#1c3324; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#11181c; --card:#18222a; --ink:#e4ebec; --muted:#97a6ad; --rule:#2b3840;
+  --accent:#6fb7c2; --accent-soft:#1d3238; --tag:#e3a84a; --tag-soft:#3a2d16;
+  --warn:#ef8a72; --warn-soft:#3d221c; --ok:#7cc79a; --ok-soft:#1c3324; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:15px/1.55 var(--body);margin:0}
+.wrap{max-width:920px;margin:0 auto;padding:32px 16px 64px;display:grid;gap:28px}
+header{display:grid;gap:8px}
+.eyebrow{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font:700 clamp(28px,5vw,42px)/1.1 var(--display);margin:0;text-wrap:balance}
+.lede{color:var(--muted);max-width:62ch;margin:0}
+.meta{font:13px var(--mono);color:var(--muted)}
+h2{font:600 20px var(--display);margin:0 0 12px}
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.dl{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:12px 14px;display:grid;gap:4px}
+.dl b{font:600 14px var(--body)}
+.dl .when{font:500 13px var(--mono)}
+.filters{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;border-block:1px solid var(--rule);padding-block:12px}
+.fg{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.fg>span{font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-right:2px}
+.chip{font:500 13px var(--body);border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:999px;padding:4px 11px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.chip:focus-visible,input:focus-visible{outline:2px solid var(--tag);outline-offset:2px}
+label.past{font-size:13px;display:flex;gap:6px;align-items:center;color:var(--muted)}
+.month{display:grid;gap:12px}
+.month h3{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:8px 0 0;border-bottom:1px solid var(--rule);padding-bottom:6px}
+.ev{display:grid;grid-template-columns:78px minmax(0,1fr);gap:16px;background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:16px}
+.ev.past{opacity:.72}
+.date{border:1px solid var(--accent);border-radius:4px;text-align:center;padding:8px 4px;align-self:start;font-family:var(--mono);color:var(--accent);position:relative}
+.date::before{content:"";position:absolute;top:-5px;left:50%;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:var(--paper);border:1px solid var(--accent)}
+.date .d{font:600 22px/1 var(--display)}
+.date .m{font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.date .y{font-size:11px;color:var(--muted)}
+.body{min-width:0;display:grid;gap:8px}
+.ev h4{font:600 18px/1.3 var(--display);margin:0;text-wrap:balance}
+.ev h4 a{color:inherit;text-decoration:none}.ev h4 a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+.theme{font-style:italic;color:var(--muted);margin:0}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font:500 11.5px var(--mono);padding:2px 8px;border-radius:3px;background:var(--accent-soft);color:var(--accent)}
+.pill.new{background:var(--tag-soft);color:var(--tag)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+dl.facts{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 14px;margin:0;font-size:14px}
+dl.facts dt{color:var(--muted)}dl.facts dd{margin:0}
+.closed{color:var(--muted);text-decoration:line-through}
+.tbd{color:var(--muted)}
+.note{font-size:13.5px;color:var(--muted);margin:0}
+.src a{font:13px var(--mono);color:var(--accent)}
+.empty{color:var(--muted);padding:24px 0}
+footer{font-size:13px;color:var(--muted);border-top:1px solid var(--rule);padding-top:16px;display:grid;gap:6px;max-width:70ch}
+@media (max-width:520px){.ev{grid-template-columns:1fr}.date{display:flex;gap:8px;align-items:baseline;justify-content:flex-start;padding:6px 10px;width:max-content}.date::before{display:none}dl.facts{grid-template-columns:1fr}dl.facts dt{margin-top:4px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Adli tıp · adli bilimler · sağlık hukuku</div>
+    <h1>Adli Tıp Kongre Takvimi</h1>
+    <p class="lede">Türkiye'de ve Türkçe, İngilizce ya da İspanyolca oturum yapılan diğer ülkelerde düzenlenen kongre, sempozyum ve atölyeler. Liste her hafta yeni duyurular için taranır; yeni eklenenler işaretlenir.</p>
+    <div class="meta" id="meta">Yükleniyor…</div>
+  </header>
+
+  <section id="fresh" hidden>
+    <h2>Bu hafta eklenenler</h2>
+    <div class="strip" id="freshList"></div>
+  </section>
+
+  <section>
+    <h2>Yaklaşan son tarihler</h2>
+    <div class="strip" id="deadlines"></div>
+  </section>
+
+  <section class="filters" aria-label="Filtreler">
+    <div class="fg" data-group="field"><span>Alan</span>
+      <button class="chip" data-v="adli-tip" aria-pressed="false">Adli tıp</button>
+      <button class="chip" data-v="adli-bilimler" aria-pressed="false">Adli bilimler</button>
+      <button class="chip" data-v="saglik-hukuku" aria-pressed="false">Sağlık hukuku</button>
+    </div>
+    <div class="fg" data-group="lang"><span>Dil</span>
+      <button class="chip" data-v="TR" aria-pressed="false">Türkçe</button>
+      <button class="chip" data-v="EN" aria-pressed="false">İngilizce</button>
+      <button class="chip" data-v="ES" aria-pressed="false">İspanyolca</button>
+    </div>
+    <div class="fg" data-group="where"><span>Yer</span>
+      <button class="chip" data-v="tr" aria-pressed="false">Türkiye</button>
+      <button class="chip" data-v="abroad" aria-pressed="false">Yurt dışı</button>
+      <button class="chip" data-v="online" aria-pressed="false">Online katılım var</button>
+    </div>
+    <label class="past"><input type="checkbox" id="showPast"> Geçmiş etkinlikleri göster</label>
+  </section>
+
+  <section id="list" aria-live="polite"></section>
+
+  <footer>
+    <div>Bilgiler düzenleyicilerin resmi sayfalarından alınır; ücret ve tarihler değişebilir, başvurmadan önce bağlantıdaki sayfayı kontrol edin.</div>
+    <div>Kapsam: Türkiye'deki tüm etkinlikler; yurt dışında Türkçe, İngilizce veya İspanyolca oturumu olan dernek, kurum ve üniversite etkinlikleri.</div>
+    <div>Yeni etkinliklerden haberdar olmak için <a href="feed.xml" style="color:var(--accent)">RSS beslemesine</a> abone olabilirsiniz.</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  const AY=["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
+  const KISA=["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara"];
+  const FIELD={"adli-tip":"Adli tıp","adli-bilimler":"Adli bilimler","saglik-hukuku":"Sağlık hukuku"};
+  const LANG={TR:"Türkçe",EN:"İngilizce",ES:"İspanyolca"};
+  const MODE={yuzyuze:"Yüz yüze",online:"Online",hibrit:"Hibrit (yüz yüze + online)"};
+  const TYPE={kongre:"Kongre",sempozyum:"Sempozyum",atolye:"Atölye",kurs:"Kurs"};
+  const today=new Date();today.setHours(0,0,0,0);
+  const D=s=>{const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d)};
+  const fmt=s=>{const x=D(s);return x.getDate()+" "+AY[x.getMonth()]+" "+x.getFullYear()};
+  const days=s=>Math.round((D(s)-today)/864e5);
+  const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const state={field:new Set(),lang:new Set(),where:new Set(),past:false};
+  try{const s=JSON.parse(localStorage.getItem("atk-filters")||"null");if(s){["field","lang","where"].forEach(k=>state[k]=new Set(s[k]||[]));state.past=!!s.past}}catch(e){}
+  let data=null;
+
+  function range(e){
+    if(e.dateText)return e.dateText;
+    if(!e.end||e.end===e.start)return fmt(e.start);
+    const a=D(e.start),b=D(e.end);
+    if(a.getMonth()===b.getMonth()&&a.getFullYear()===b.getFullYear())return a.getDate()+"–"+b.getDate()+" "+AY[a.getMonth()]+" "+a.getFullYear();
+    return a.getDate()+" "+AY[a.getMonth()]+" – "+fmt(e.end);
+  }
+  const isPast=e=>!e.dateText&&days(e.end||e.start)<0;
+  const isNew=e=>e.added&&days(e.added)>=-7;
+  function dlCell(s){
+    if(!s)return '<span class="tbd">Açıklanmadı</span>';
+    const n=days(s);
+    if(n<0)return '<span class="closed">'+fmt(s)+'</span> <span class="tbd">(geçti)</span>';
+    return fmt(s)+' <span class="pill '+(n<=14?"warn":"ok")+'">'+(n===0?"bugün":n+" gün kaldı")+'</span>';
+  }
+  function match(e){
+    if(!state.past&&isPast(e))return false;
+    if(state.field.size&&!e.field.some(f=>state.field.has(f)))return false;
+    if(state.lang.size&&!e.languages.some(l=>state.lang.has(l)))return false;
+    if(state.where.size){
+      const tr=e.country==="Türkiye",on=e.mode!=="yuzyuze";
+      const ok=(state.where.has("tr")&&tr)||(state.where.has("abroad")&&!tr)||(state.where.has("online")&&on);
+      if(!ok)return false;
+    }
+    return true;
+  }
+  function card(e){
+    const x=D(e.start),past=isPast(e);
+    const pills=[];
+    if(isNew(e))pills.push('<span class="pill new">Yeni eklendi</span>');
+    pills.push('<span class="pill">'+(TYPE[e.type]||"Kongre")+'</span>');
+    e.field.forEach(f=>pills.push('<span class="pill">'+FIELD[f]+'</span>'));
+    if(past)pills.push('<span class="pill">Tamamlandı</span>');
+    const loc=[e.venue,e.city,e.country].filter(Boolean).join(", ");
+    return '<article class="ev'+(past?" past":"")+'">'+
+      '<div class="date" aria-hidden="true">'+(e.dateText?'<div class="d">'+x.getFullYear()+'</div><div class="m">TBA</div>':'<div class="d">'+x.getDate()+'</div><div class="m">'+KISA[x.getMonth()]+'</div><div class="y">'+x.getFullYear()+'</div>')+'</div>'+
+      '<div class="body">'+
+        '<div class="pills">'+pills.join("")+'</div>'+
+        '<h4><a href="'+esc(e.url)+'" target="_blank" rel="noopener">'+esc(e.name)+'</a></h4>'+
+        (e.theme?'<p class="theme">'+esc(e.theme)+'</p>':'')+
+        '<dl class="facts">'+
+          '<dt>Tarih</dt><dd>'+range(e)+'</dd>'+
+          '<dt>Yer</dt><dd>'+esc(loc)+' · '+MODE[e.mode]+'</dd>'+
+          '<dt>Düzenleyen</dt><dd>'+esc(e.org)+'</dd>'+
+          '<dt>Dil</dt><dd>'+(e.languages.length?e.languages.map(l=>LANG[l]).join(", "):'<span class="tbd">Açıklanmadı</span>')+'</dd>'+
+          '<dt>Ücret</dt><dd>'+(e.fee?esc(e.fee):'<span class="tbd">Açıklanmadı / sitede</span>')+'</dd>'+
+          (past?'':'<dt>Özet son tarih</dt><dd>'+dlCell(e.abstractDeadline)+'</dd><dt>Kayıt son tarih</dt><dd>'+dlCell(e.registrationDeadline)+'</dd>')+
+        '</dl>'+
+        (e.notes?'<p class="note">'+esc(e.notes)+'</p>':'')+
+        '<div class="src"><a href="'+esc(e.url)+'" target="_blank" rel="noopener">Resmi sayfa ↗</a></div>'+
+      '</div></article>';
+  }
+  function render(){
+    const evs=data.events.filter(match).sort((a,b)=>isPast(a)-isPast(b)||(isPast(a)?D(b.start)-D(a.start):D(a.start)-D(b.start)));
+    const list=document.getElementById("list");
+    if(!evs.length){list.innerHTML='<p class="empty">Bu filtrelere uyan etkinlik yok. Filtreleri azaltmayı deneyin.</p>';return}
+    let html="",cur="";
+    evs.forEach(e=>{
+      const x=D(e.start),key=isPast(e)?"Geçmiş etkinlikler":(e.dateText?x.getFullYear()+" (tarih açıklanmadı)":AY[x.getMonth()]+" "+x.getFullYear());
+      if(key!==cur){if(cur)html+="</div>";html+='<div class="month"><h3>'+key+'</h3>';cur=key}
+      html+=card(e);
+    });
+    list.innerHTML=html+"</div>";
+  }
+  function strips(){
+    const items=[];
+    data.events.forEach(e=>{
+      [["abstractDeadline","Özet gönderimi"],["registrationDeadline","Kayıt"]].forEach(([k,l])=>{if(e[k]&&days(e[k])>=0)items.push({e,l,s:e[k]})});
+      const ws=e.earlyDeadline;if(ws&&days(ws)>=0)items.push({e,l:"Erken kayıt",s:ws});
+    });
+    items.sort((a,b)=>D(a.s)-D(b.s));
+    const el=document.getElementById("deadlines");
+    el.innerHTML=items.length?items.slice(0,6).map(i=>'<div class="dl"><span class="pill '+(days(i.s)<=14?"warn":"ok")+'" style="width:max-content">'+i.l+'</span><b>'+esc(i.e.name)+'</b><span class="when">'+fmt(i.s)+' · '+days(i.s)+' gün</span></div>').join(""):'<p class="empty">Şu anda açık son tarih yok.</p>';
+    const fresh=data.events.filter(e=>isNew(e)&&!isPast(e));
+    const fs=document.getElementById("fresh");
+    if(fresh.length&&fresh.length<data.events.length){fs.hidden=false;document.getElementById("freshList").innerHTML=fresh.map(e=>'<div class="dl"><b>'+esc(e.name)+'</b><span class="when">'+range(e)+'</span></div>').join("")}
+  }
+  function bind(){
+    document.querySelectorAll(".fg").forEach(g=>{const k=g.dataset.group;g.querySelectorAll(".chip").forEach(b=>{
+      b.setAttribute("aria-pressed",state[k].has(b.dataset.v));
+      b.addEventListener("click",()=>{state[k].has(b.dataset.v)?state[k].delete(b.dataset.v):state[k].add(b.dataset.v);b.setAttribute("aria-pressed",state[k].has(b.dataset.v));save();render()})})});
+    const p=document.getElementById("showPast");p.checked=state.past;p.addEventListener("change",()=>{state.past=p.checked;save();render()});
+  }
+  function save(){try{localStorage.setItem("atk-filters",JSON.stringify({field:[...state.field],lang:[...state.lang],where:[...state.where],past:state.past}))}catch(e){}}
+  fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{
+    data=j;const up=data.events.filter(e=>!isPast(e)).length;
+    document.getElementById("meta").textContent="Son güncelleme: "+fmt(data.updated)+" · "+up+" yaklaşan etkinlik · haftalık taranır";
+    bind();strips();render();
+  }).catch(()=>{document.getElementById("meta").textContent="Liste yüklenemedi. Sayfayı yenileyin."});
+})();
+</script>
+</body>
+</html>

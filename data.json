@@ -1,0 +1,295 @@
+{
+ "updated": "2026-10-10",
+ "events": [
+  {
+   "id": "turaz-tabk-2026",
+   "name": "6. Türk Adli Bilimler Kongresi ve 18. Adli Tıp Çalıştayı",
+   "theme": "Kırılgan Gruplarda Suç Ekosistemi: Sokaktan Dijital Dünyaya Yeni Riskler ve Çözüm Yaklaşımları",
+   "org": "TURAZ Bilim Derneği",
+   "field": [
+    "adli-tip",
+    "adli-bilimler"
+   ],
+   "start": "2026-11-05",
+   "end": "2026-11-08",
+   "venue": "Belek Beach Resort Hotel",
+   "city": "Antalya (Belek)",
+   "country": "Türkiye",
+   "mode": "yuzyuze",
+   "languages": [
+    "TR",
+    "EN"
+   ],
+   "fee": "1 Mayıs 2026 sonrası: tek kişilik oda + 3 gece konaklama + kayıt 33.000 ₺, iki kişilik 44.000 ₺; günübirlik 130 € (TL karşılığı); dernek dışı konaklamada kayıt 5.000 ₺",
+   "abstractDeadline": "2026-09-01",
+   "registrationDeadline": null,
+   "notes": "Sadece sınırlı sayıda poster bildirisi kabul ediliyor; özetler Türkçe ve İngilizce gönderiliyor.",
+   "url": "https://www.turazbilimdernegi.com/kongre-antalya/",
+   "type": "kongre",
+   "added": "2026-10-10"
+  },
+  {
+   "id": "tr-az-de-tip-hukuku-2026",
+   "name": "XVII. Türkiye Azerbaycan Almanya Tıp Hukuku Sempozyumu",
+   "theme": null,
+   "org": "Prof. Dr. Hakan Hakeri başkanlığında düzenleme kurulu",
+   "field": [
+    "saglik-hukuku"
+   ],
+   "start": "2026-10-16",
+   "end": "2026-10-17",
+   "venue": null,
+   "city": "Bakü",
+   "country": "Azerbaycan",
+   "mode": "yuzyuze",
+   "languages": [],
+   "fee": null,
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "notes": "Ayrıntılar (ücret, dil, kayıt) henüz açıklanmadı.",
+   "url": "https://saglikdunyasidergisi.com/haber/xvii-turkiye-azerbaycan-almanya-tip-hukuku-sempozyumu-22319",
+   "type": "sempozyum",
+   "added": "2026-10-10"
+  },
+  {
+   "id": "aeds-xxxii-2026",
+   "name": "XXXII Congreso Nacional de Derecho Sanitario",
+   "theme": "Europa: Salud, innovación y regulación",
+   "org": "Asociación Española de Derecho Sanitario (AEDS)",
+   "field": [
+    "saglik-hukuku"
+   ],
+   "start": "2026-11-19",
+   "end": "2026-11-20",
+   "venue": "Novotel Madrid Center",
+   "city": "Madrid",
+   "country": "İspanya",
+   "mode": "yuzyuze",
+   "languages": [
+    "ES"
+   ],
+   "fee": null,
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "notes": "Konular arasında mesleki sorumluluk ve hasta güvenliği, yapay zekâ ve sağlıkta dijital dönüşüm var.",
+   "url": "https://www.30derechosanitario.com",
+   "type": "kongre",
+   "added": "2026-10-10"
+  },
+  {
+   "id": "aafs-2027",
+   "name": "AAFS 79th Annual Scientific Conference",
+   "theme": "Around the World and Beyond",
+   "org": "American Academy of Forensic Sciences (AAFS)",
+   "field": [
+    "adli-tip",
+    "adli-bilimler"
+   ],
+   "start": "2027-02-15",
+   "end": "2027-02-20",
+   "venue": "Rosen Shingle Creek",
+   "city": "Orlando, FL",
+   "country": "ABD",
+   "mode": "yuzyuze",
+   "languages": [
+    "EN"
+   ],
+   "fee": "Erken kayıt 14 Kasım 2026'ya kadar, normal kayıt 15 Kasım–14 Ocak, sonrası geç kayıt (tutarlar sitede)",
+   "abstractDeadline": "2026-08-01",
+   "registrationDeadline": "2026-12-31",
+   "notes": "Kayıt son tarihi kabul edilen sunucular içindir. Erken kayıt indirimi 14 Kasım 2026'da biter.",
+   "url": "https://www.aafs.org/annual-conference",
+   "type": "kongre",
+   "added": "2026-10-10",
+   "earlyDeadline": "2026-11-14"
+  },
+  {
+   "id": "ialm-2027",
+   "name": "27th Congress of the International Academy of Legal Medicine (IALM 2027)",
+   "theme": null,
+   "org": "International Academy of Legal Medicine (IALM)",
+   "field": [
+    "adli-tip",
+    "adli-bilimler"
+   ],
+   "start": "2027-05-18",
+   "end": "2027-05-21",
+   "venue": "World Forum",
+   "city": "Lahey",
+   "country": "Hollanda",
+   "mode": "yuzyuze",
+   "languages": [
+    "EN"
+   ],
+   "fee": null,
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "notes": "Üç yılda bir yapılır. Özet ve ücret tarihleri resmi sitede duyurulacak.",
+   "url": "https://ialm.info/?p=5038",
+   "type": "kongre",
+   "added": "2026-10-10"
+  },
+  {
+   "id": "eafs-2028",
+   "name": "EAFS 2028 – European Academy of Forensic Science Conference",
+   "theme": null,
+   "org": "SPA Forensic Services, University of Strathclyde, University of Dundee",
+   "field": [
+    "adli-bilimler",
+    "adli-tip"
+   ],
+   "start": "2028-01-01",
+   "end": null,
+   "dateText": "2028 (tarih açıklanmadı)",
+   "venue": null,
+   "city": "Glasgow",
+   "country": "Birleşik Krallık",
+   "mode": "yuzyuze",
+   "languages": [
+    "EN"
+   ],
+   "fee": null,
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "notes": "Avrupa'nın en büyük adli bilimler toplantısı; üç yılda bir.",
+   "url": "https://www.dundee.ac.uk/press-release/europes-biggest-forensic-science-event-confirmed-scotland-2028",
+   "type": "kongre",
+   "added": "2026-10-10"
+  },
+  {
+   "id": "ubak-hukuk-2026",
+   "name": "11. Uluslararası Adli Bilimler ve Hukuk Kongresi",
+   "theme": null,
+   "org": "UBAK",
+   "field": [
+    "adli-bilimler",
+    "saglik-hukuku"
+   ],
+   "start": "2026-10-02",
+   "end": "2026-10-04",
+   "venue": null,
+   "city": "Ankara",
+   "country": "Türkiye",
+   "mode": "hibrit",
+   "languages": [
+    "TR",
+    "EN"
+   ],
+   "fee": "Online tek bildiri 2.600 ₺, yüz yüze tek bildiri 4.000 ₺",
+   "abstractDeadline": "2026-09-11",
+   "registrationDeadline": "2026-09-17",
+   "notes": "Online sunumlar Zoom üzerinden.",
+   "url": "https://www.ubakkongre.com/hukuk",
+   "type": "kongre",
+   "added": "2026-10-10"
+  },
+  {
+   "id": "atg-21-2026",
+   "name": "Uluslararası 21. Adli Tıp Günleri",
+   "theme": null,
+   "org": "Adli Tıp Kurumu Başkanlığı",
+   "field": [
+    "adli-tip",
+    "adli-bilimler",
+    "saglik-hukuku"
+   ],
+   "start": "2026-09-21",
+   "end": "2026-09-27",
+   "venue": "ATGV Eğitim ve Sosyal Tesisleri",
+   "city": "Antalya",
+   "country": "Türkiye",
+   "mode": "yuzyuze",
+   "languages": [
+    "TR",
+    "EN"
+   ],
+   "fee": null,
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "notes": "Her yıl Eylül sonunda yapılıyor; 2027 duyurusu için siteyi izleyin.",
+   "url": "https://adlitipgunleri.com/",
+   "type": "kongre",
+   "added": "2026-10-10"
+  },
+  {
+   "id": "waml-30-2026",
+   "name": "30th World Congress for Medical Law",
+   "theme": "Expanding Boundaries of Health Law: Access, Innovation and Interdisciplinarity",
+   "org": "World Association for Medical Law (WAML)",
+   "field": [
+    "saglik-hukuku",
+    "adli-tip"
+   ],
+   "start": "2026-08-05",
+   "end": "2026-08-07",
+   "venue": "University of Antwerp",
+   "city": "Anvers",
+   "country": "Belçika",
+   "mode": "yuzyuze",
+   "languages": [
+    "EN"
+   ],
+   "fee": null,
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "notes": "Her yıl yapılıyor; çeviri destekli çok dilli oturumlar.",
+   "url": "https://antwerpconventionbureau.be/events/30th-annual-world-congress-for-medical-law",
+   "type": "kongre",
+   "added": "2026-10-10"
+  },
+  {
+   "id": "iafs-2026",
+   "name": "IAFS 2026 – 24th Triennial Meeting of the International Association of Forensic Sciences",
+   "theme": "Working Together for the Future of Forensic Sciences",
+   "org": "IAFS; ISFRI 2026 ve BAFS 2026 ile birlikte",
+   "field": [
+    "adli-tip",
+    "adli-bilimler",
+    "saglik-hukuku"
+   ],
+   "start": "2026-05-25",
+   "end": "2026-05-30",
+   "venue": null,
+   "city": "Sofya",
+   "country": "Bulgaristan",
+   "mode": "yuzyuze",
+   "languages": [
+    "EN"
+   ],
+   "fee": null,
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "notes": "Üç yılda bir; bir sonraki 2029.",
+   "url": "https://uzay.tubitak.gov.tr/en/?p=26864",
+   "type": "kongre",
+   "added": "2026-10-10"
+  },
+  {
+   "id": "atud-22-2026",
+   "name": "6. Uluslararası 22. Ulusal Adli Bilimler Kongresi",
+   "theme": "Yapay Zekâ",
+   "org": "Adli Tıp Uzmanları Derneği (ATUD)",
+   "field": [
+    "adli-tip",
+    "adli-bilimler"
+   ],
+   "start": "2026-04-30",
+   "end": "2026-05-03",
+   "venue": "Palm Wings Ephesus Resort Hotel",
+   "city": "İzmir (Kuşadası)",
+   "country": "Türkiye",
+   "mode": "yuzyuze",
+   "languages": [
+    "TR",
+    "EN"
+   ],
+   "fee": null,
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "notes": "ATUD her yıl düzenliyor; 2027 kongresi için atud.org.tr'yi izleyin.",
+   "url": "https://www.adlibilimler2026.com/tr/",
+   "type": "kongre",
+   "added": "2026-10-10"
+  }
+ ]
+}
