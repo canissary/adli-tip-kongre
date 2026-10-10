@@ -87,14 +87,14 @@
    ],
    "start": "2027-02-15",
    "end": "2027-02-20",
-   "venue": "Rosen Shingle Creek",
-   "city": "Orlando, FL",
+   "venue": "Rosen Shingle Creek Hotel",
+   "city": "Orlando",
    "country": "ABD",
    "mode": "yuzyuze",
    "languages": [
     "EN"
    ],
-   "fee": "Erken kayıt 14 Kasım 2026'ya kadar, normal kayıt 15 Kasım–14 Ocak, sonrası geç kayıt (tutarlar sitede)",
+   "fee": "Erken kayıt (22 Eylül–14 Kasım 2026): üye 595 $, öğrenci üye 260 $, üye olmayan 850 $, üye olmayan öğrenci 465 $; normal kayıt (15 Kasım 2026–14 Ocak 2027): 670 $ / 335 $ / 930 $ / 540 $; geç kayıt (14 Ocak sonrası): 750 $ / 415 $ / 1.000 $ / 600 $; tek gün 260–385 $",
    "abstractDeadline": "2026-08-01",
    "registrationDeadline": "2026-12-31",
    "notes": "Kayıt son tarihi kabul edilen sunucular içindir. Erken kayıt indirimi 14 Kasım 2026'da biter.",
@@ -122,7 +122,7 @@
     "EN"
    ],
    "fee": null,
-   "abstractDeadline": null,
+   "abstractDeadline": "2026-12-12",
    "registrationDeadline": null,
    "notes": "Üç yılda bir yapılır. Özet ve ücret tarihleri resmi sitede duyurulacak.",
    "url": "https://ialm.info/?p=5038",
@@ -138,10 +138,10 @@
     "adli-bilimler",
     "adli-tip"
    ],
-   "start": "2028-01-01",
-   "end": null,
+   "start": "2028-09-18",
+   "end": "2028-09-22",
    "dateText": "2028 (tarih açıklanmadı)",
-   "venue": null,
+   "venue": "Scottish Event Campus (SEC)",
    "city": "Glasgow",
    "country": "Birleşik Krallık",
    "mode": "yuzyuze",
@@ -289,6 +289,116 @@
    "notes": "ATUD her yıl düzenliyor; 2027 kongresi için atud.org.tr'yi izleyin.",
    "url": "https://www.adlibilimler2026.com/tr/",
    "type": "kongre",
+   "added": "2026-10-10"
+  },
+  {
+   "id": "inmlcf-22-2026",
+   "name": "22 Congreso Nacional y 7 Internacional de Medicina Legal y Ciencias Forenses",
+   "theme": null,
+   "org": "Instituto Nacional de Medicina Legal y Ciencias Forenses (INMLCF)",
+   "venue": "Hotel Tequendama",
+   "city": "Bogotá",
+   "country": "Kolombiya",
+   "fee": null,
+   "notes": "Sitede 26–30 Ekim de yazıyor (ön kurslar olup olmadığı doğrulanamadı). Serbest bildiri çağrısı açık, son tarih bulunamadı. 2024 sürümü INMLCF personeline yönelikti, dışarıdan katılım koşulları teyit edilmeli; 2026 formatı (hibrit/online) doğrulanamadı.",
+   "dateText": null,
+   "start": "2026-10-28",
+   "end": "2026-10-30",
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "earlyDeadline": null,
+   "type": "kongre",
+   "field": [
+    "adli-tip",
+    "adli-bilimler"
+   ],
+   "mode": "yuzyuze",
+   "languages": [
+    "ES"
+   ],
+   "url": "https://congresomedicinalegal.com/sitio/",
+   "added": "2026-10-10"
+  },
+  {
+   "id": "acmf-xvii-jornadas-2026",
+   "name": "XVII Jornadas de Actualización en Medicina Forense",
+   "theme": null,
+   "org": "Associació Catalana de Metges Forenses (ACMF) – Asociación Nacional de Médicos Forenses (ANMF) iş birliğiyle",
+   "venue": null,
+   "city": "Barselona",
+   "country": "İspanya",
+   "fee": null,
+   "notes": "ANMF sitesinde 'Próximas jornadas' altında yer alıyor; kayıt açık. Yıl bilgisi aynı sayfadaki 2026 etkinlikleriyle birlikte listelendiği için 2026 alındı. Resmî etkinlik sayfası bulunamadı, ANMF ana sayfası verildi.",
+   "dateText": null,
+   "start": "2026-10-15",
+   "end": "2026-10-17",
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "earlyDeadline": null,
+   "type": "kongre",
+   "field": [
+    "adli-tip"
+   ],
+   "mode": "yuzyuze",
+   "languages": [
+    "ES"
+   ],
+   "url": "https://anmf-reml.es/",
+   "added": "2026-10-10"
+  },
+  {
+   "id": "sepf-xxx-2026",
+   "name": "XXX Simposio de la Sociedad Española de Psiquiatría Forense",
+   "theme": "TEA (otizm spektrum bozukluğu) ve adli psikiyatri",
+   "org": "Sociedad Española de Psiquiatría Forense (SEPF) – IMELGA, Asociación Galega de Médicos Forenses, ANMF",
+   "venue": null,
+   "city": "Pontevedra",
+   "country": "İspanya",
+   "fee": null,
+   "notes": "Program taslağı (provisional) yayımlandı; kayıt ANMF sitesine göre açık.",
+   "dateText": null,
+   "start": "2026-10-23",
+   "end": "2026-10-24",
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "earlyDeadline": null,
+   "type": "sempozyum",
+   "field": [
+    "adli-tip"
+   ],
+   "mode": "yuzyuze",
+   "languages": [
+    "ES"
+   ],
+   "url": "https://anmf-reml.es/wp-content/uploads/2026/05/Programa-provisional-Simposio-SEPF-Pontevedra-23-y-24-octubre-2026.pdf",
+   "added": "2026-10-10"
+  },
+  {
+   "id": "aclm-2027",
+   "name": "American College of Legal Medicine (ACLM) 2027 Annual Conference",
+   "theme": null,
+   "org": "American College of Legal Medicine (ACLM)",
+   "venue": "Paris Las Vegas",
+   "city": "Las Vegas",
+   "country": "ABD",
+   "fee": null,
+   "notes": "Özet çağrısı açık; son tarih sayfada görünmüyor.",
+   "dateText": null,
+   "start": "2027-02-25",
+   "end": "2027-02-28",
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "earlyDeadline": null,
+   "type": "kongre",
+   "field": [
+    "saglik-hukuku",
+    "adli-tip"
+   ],
+   "mode": "yuzyuze",
+   "languages": [
+    "EN"
+   ],
+   "url": "https://aclm.org/call-for-abstract-proposals/",
    "added": "2026-10-10"
   }
  ]
