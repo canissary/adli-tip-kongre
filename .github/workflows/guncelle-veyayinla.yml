@@ -1,0 +1,74 @@
+name: Haftalık güncelle ve yayınla
+
+on:
+  schedule:
+    # Her pazartesi 05:49 UTC = 08:49 İstanbul
+    - cron: "49 5 * * 1"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: kongre-takvimi
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    outputs:
+      has_news: ${{ steps.run.outputs.has_news }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Yeni etkinlikleri ara ve verileri güncelle
+        id: run
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+          MAX_SEARCHES: ${{ vars.MAX_SEARCHES }}
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+        run: python scripts/update.py
+      - name: Değişiklikleri kaydet
+        run: |
+          git config user.name "kongre-takvimi-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data.json feed.xml changes.md
+          git diff --cached --quiet || git commit -m "Haftalık güncelleme $(date +%F)"
+          git push
+      - name: Yenilikleri duyuru (issue) olarak aç
+        if: steps.run.outputs.has_news == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue create --title "Yeni kongre duyuruları – $(date +%F)" --body-file changes.md
+
+  deploy:
+    needs: update
+    if: always() && (needs.update.result == 'success' || needs.update.result == 'skipped')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Site dosyalarını hazırla
+        run: |
+          mkdir _site
+          cp index.html data.json _site/
+          [ -f feed.xml ] && cp feed.xml _site/ || true
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
