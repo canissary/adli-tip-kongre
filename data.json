@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10",
+ "updated": "2026-10-12",
  "events": [
   {
    "id": "turaz-tabk-2026",
@@ -400,6 +400,87 @@
    ],
    "url": "https://aclm.org/call-for-abstract-proposals/",
    "added": "2026-10-10"
+  },
+  {
+   "id": "forensoc-2027",
+   "name": "ForenSoc '27 – International Forensic Social Sciences Conference",
+   "theme": "Adli bilimlerin toplum, adalet ve insan davranışıyla kesişimi",
+   "org": "Balkan Academy of Forensic Sciences (BAFS); ortak düzenleyici: İstanbul Medipol Üniversitesi",
+   "venue": "İstanbul Medipol Üniversitesi Kavacık Güney Yerleşkesi",
+   "city": "İstanbul",
+   "country": "Türkiye",
+   "fee": "Erken kayıt: öğrenci/asistan 100 €, tam kayıt 200 €",
+   "notes": "Özet kabul bildirimi 2026-12-07. Yüz yüze (İstanbul) veya online katılım mümkün.",
+   "dateText": null,
+   "start": "2027-02-05",
+   "end": "2027-02-07",
+   "abstractDeadline": "2026-11-13",
+   "registrationDeadline": null,
+   "earlyDeadline": "2026-12-11",
+   "type": "kongre",
+   "field": [
+    "adli-bilimler"
+   ],
+   "mode": "hibrit",
+   "languages": [
+    "EN"
+   ],
+   "url": "https://www.forensoc.org/",
+   "added": "2026-10-12"
+  },
+  {
+   "id": "colderecho-vii-2026",
+   "name": "VII Congreso Internacional de Derecho Médico y Bioderecho",
+   "theme": null,
+   "org": "Colegio de Abogados en Derecho Médico y Bioderecho de Colombia",
+   "venue": "Hotel Sonesta Usaquén",
+   "city": "Bogotá",
+   "country": "Kolombiya",
+   "fee": null,
+   "notes": "Hem yüz yüze hem sanal katılım. Ücret bilgisi sayfada doğrulanamadı.",
+   "dateText": null,
+   "start": "2026-11-26",
+   "end": "2026-11-27",
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "earlyDeadline": null,
+   "type": "kongre",
+   "field": [
+    "saglik-hukuku"
+   ],
+   "mode": "hibrit",
+   "languages": [
+    "ES"
+   ],
+   "url": "https://congresoderechomedico.com/",
+   "added": "2026-10-12"
+  },
+  {
+   "id": "sepjf-xvii-2027",
+   "name": "XVII Congreso (Inter)Nacional de Psicología Jurídica y Forense",
+   "theme": null,
+   "org": "Sociedad Española de Psicología Jurídica y Forense (SEPJF)",
+   "venue": "Teatro Municipal Pedro Muñoz Seca",
+   "city": "El Puerto de Santa María (Cádiz)",
+   "country": "İspanya",
+   "fee": null,
+   "notes": "Adli psikoloji ağırlıklı. Online katılım seçeneği doğrulanamadı.",
+   "dateText": null,
+   "start": "2027-03-04",
+   "end": "2027-03-06",
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "earlyDeadline": null,
+   "type": "kongre",
+   "field": [
+    "adli-bilimler"
+   ],
+   "mode": "yuzyuze",
+   "languages": [
+    "ES"
+   ],
+   "url": "https://sepjf.org/",
+   "added": "2026-10-12"
   }
  ]
 }
