@@ -26,7 +26,7 @@ CHANGES = os.path.join(ROOT, "changes.md")
 SITE_URL = os.environ.get("SITE_URL", "").rstrip("/")
 
 MODEL = os.environ.get("ANTHROPIC_MODEL") or "claude-sonnet-5-5"
-MAX_SEARCHES = int(os.environ.get("MAX_SEARCHES") or "25")
+MAX_SEARCHES = int(os.environ.get("MAX_SEARCHES") or "30")
 API = "https://api.anthropic.com/v1/messages"
 
 TYPES = {"kongre", "sempozyum", "atolye", "kurs"}
@@ -37,18 +37,50 @@ DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 TEXT_KEYS = ["name", "theme", "org", "venue", "city", "country", "fee", "notes", "dateText"]
 DATE_KEYS = ["start", "end", "abstractDeadline", "registrationDeadline", "earlyDeadline"]
 
+# Her hafta çekirdek kaynaklara ek olarak bir bölge sırayla ayrıntılı taranır.
+# Böylece arama sayısı (ve maliyet) sabit kalırken her bölge 5 haftada bir mutlaka kontrol edilir.
+REGIONS = [
+    "Almanya, Avusturya, İsviçre, Hollanda, Belçika, İskandinavya: Deutsche Gesellschaft für Rechtsmedizin (DGRM) "
+    "yıllık toplantısı (İngilizce oturum varsa), Swiss Society of Legal Medicine (SGRM), Netherlands Forensic Institute (NFI), "
+    "Nordic Association of Forensic Medicine, ISFG (International Society for Forensic Genetics), "
+    "TIAFT (International Association of Forensic Toxicologists), GTFCh, ISFRI (forensic radiology), "
+    "FASE (Forensic Anthropology Society of Europe), IOFOS (forensic odontology).",
+    "İtalya, Yunanistan, Portekiz, Balkanlar, Doğu Avrupa: SIMLA (İngilizce oturum varsa), "
+    "Mediterranean Academy of Forensic Sciences (MAFS), Hellenic Society of Forensic Medicine, "
+    "Polonya, Romanya, Macaristan, Çekya adli tıp dernekleri, Balkan Academy of Forensic Sciences (BAFS), "
+    "European Council of Legal Medicine (ECLM) toplantıları, ENFSI çalışma grubu toplantıları.",
+    "Doğu Asya ve Pasifik: Japonya (Japanese Society of Legal Medicine, uluslararası oturumlar), "
+    "Güney Kore (Korean Society of Legal Medicine), Çin, Tayvan, Singapur, Malezya, "
+    "Asian Forensic Sciences Network (AFSN), INPALMS (Indo-Pacific Association of Law, Medicine and Science), "
+    "Avustralya/Yeni Zelanda (ANZFSS), Hindistan (Indian Academy of Forensic Medicine).",
+    "Orta Doğu, Kafkasya, Orta Asya ve Afrika: Azerbaycan, Gürcistan, Kazakistan, Özbekistan adli tıp kurumları; "
+    "BAE (Dubai Police forensic konferansları), Suudi Arabistan, Katar, Mısır, Ürdün; "
+    "Güney Afrika ve Afrika adli bilimler dernekleri; ICRC (Uluslararası Kızılhaç) adli tıp etkinlikleri; "
+    "Interpol International Forensic Science Managers Symposium.",
+    "İspanyolca konuşulan ülkeler ve Amerika kıtası: Asociación Española de Derecho Sanitario, "
+    "Sociedad Española de Medicina Legal y Forense, Asociación Nacional de Médicos Forenses, "
+    "Latin Amerika adli tıp enstitüleri (Kolombiya INMLCF, Panama IMELCF, Meksika, Peru, Arjantin, Şili), "
+    "Iberoamerikan kongreleri; ABD ve Kanada: NAME (National Association of Medical Examiners), "
+    "IAFN (International Association of Forensic Nurses), Canadian Society of Forensic Science.",
+]
+
 PROMPT = """Bugünün tarihi: {today}.
 
 Görevin: Türkiye'deki adli tıp doktorları için tutulan "Adli Tıp Kongre Takvimi" listesini güncellemek. Amaç, yeni açıklanan kongre, sempozyum, atölye ve kursları kaçırmamaları.
 
 KAPSAM
 - Türkiye'de düzenlenen tüm adli tıp, adli bilimler ve sağlık/tıp hukuku kongre, sempozyum, atölye ve kursları (yüz yüze veya online).
-- Yurt dışında: Türkçe, İngilizce veya İspanyolca oturumu olan; dernek, kurum veya üniversitelerin düzenlediği etkinlikler.
+- Yurt dışında: dünyanın HER ülkesi kapsamdadır. Ölçüt ülkenin ana dili değil, etkinliğin dilidir: Türkçe, İngilizce veya İspanyolca oturumu olan; dernek, kurum veya üniversitelerin düzenlediği etkinlikler. Japonya, Güney Kore, Almanya, Hollanda, İsviçre, İtalya gibi ana dili İngilizce olmayan ülkelerdeki uluslararası katılımlı, İngilizce oturumlu etkinlikler de eklenir.
+- Ulusal derneklerin yalnızca yerel dilde (ör. sadece Almanca, Japonca, İtalyanca) yapılan kongreleri EKLENMEZ; İngilizce oturum, uluslararası oturum veya simultane çeviri varsa eklenir. languages alanına yalnızca gerçekten bulunan dilleri yaz.
 - Sadece bugünden sonra başlayan etkinlikler.
 - EKLEME: adli bilimlere özel olmayan, ücret karşılığı "ISBN'li bildiri kitabı" vaat eden genel/ticari kongreler; reklam niteliğindeki "summit" ve benzeri predatör etkinlikler.
 
-KONTROL EDİLECEK KAYNAKLAR (en az bunlar)
-atud.org.tr, adlitipgunleri.com, atk.gov.tr, turazbilimdernegi.com, Adli Bilimciler Derneği, Polis Akademisi Adli Bilimler Enstitüsü (pa.edu.tr), Jandarma ve Sahil Güvenlik Akademisi, üniversitelerin adli tıp anabilim dalları ve adli bilimler enstitüleri, tıp hukuku sempozyumları, doktorclub.com/kongreler/turkiye; aafs.org, ialm.info, ECLM, EAFS/ENFSI, IAFS, BAFS, World Association for Medical Law; Asociación Española de Derecho Sanitario, Sociedad Española de Medicina Legal y Forense, Asociación Nacional de Médicos Forenses, Latin Amerika adli tıp enstitüleri (Kolombiya INMLCF, Panama IMELCF, Meksika, Peru, Arjantin, Şili) ve Iberoamerikan kongreleri.
+KONTROL EDİLECEK KAYNAKLAR
+A) HER HAFTA (çekirdek):
+atud.org.tr, adlitipgunleri.com, atk.gov.tr, turazbilimdernegi.com, Adli Bilimciler Derneği, Polis Akademisi Adli Bilimler Enstitüsü (pa.edu.tr), Jandarma ve Sahil Güvenlik Akademisi, üniversitelerin adli tıp anabilim dalları ve adli bilimler enstitüleri, tıp hukuku sempozyumları, doktorclub.com/kongreler/turkiye; aafs.org, ialm.info, ECLM, EAFS/ENFSI, IAFS, BAFS, World Association for Medical Law. Ayrıca "international congress legal medicine {next_year}", "forensic medicine conference {next_year} call for abstracts" gibi genel İngilizce aramalar yap.
+
+B) BU HAFTANIN ODAK BÖLGESİ (dönüşümlü; her bölge birkaç haftada bir sırayla taranır). Bu bölgeye aramalarının en az üçte birini ayır:
+{region}
 
 LİSTEDE ZATEN OLAN ETKİNLİKLER (id | ad | başlangıç | özet son tarihi | kayıt son tarihi | ücret | url)
 {existing}
@@ -194,7 +226,11 @@ def main():
         f"{e.get('registrationDeadline')} | {e.get('fee')} | {e['url']}"
         for e in events
     )
-    result = parse(ask(PROMPT.format(today=today.isoformat(), existing=existing)))
+    region = REGIONS[today.isocalendar()[1] % len(REGIONS)]
+    print(f"Bu haftanın odak bölgesi: {region.split(':')[0]}")
+    result = parse(ask(PROMPT.format(
+        today=today.isoformat(), next_year=today.year + 1, region=region, existing=existing,
+    )))
 
     added, changed = [], []
     names = {e["name"].lower() for e in events}
