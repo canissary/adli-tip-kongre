@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12",
+ "updated": "2026-11-02",
  "events": [
   {
    "id": "turaz-tabk-2026",
@@ -481,6 +481,199 @@
    ],
    "url": "https://sepjf.org/",
    "added": "2026-10-12"
+  },
+  {
+   "id": "tiaft-2027",
+   "name": "TIAFT 2027 – 64th Annual Meeting of the International Association of Forensic Toxicologists",
+   "theme": null,
+   "org": "The International Association of Forensic Toxicologists (TIAFT) / Adli ve Klinik Toksikoloji Derneği (AKTOD)",
+   "venue": "Swissôtel Büyük Efes İzmir",
+   "city": "İzmir",
+   "country": "Türkiye",
+   "fee": null,
+   "notes": "TIAFT yıllık toplantısı ilk kez Türkiye'de. Özet ve kayıt tarihleri henüz bulunamadı. Etkinlik dili ve yüz yüze olması kaynaklarda açıkça belirtilmemiş, TIAFT toplantılarının İngilizce yürütülmesine dayanılarak yazıldı.",
+   "dateText": null,
+   "start": "2027-10-03",
+   "end": "2027-10-07",
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "earlyDeadline": null,
+   "type": "kongre",
+   "field": [
+    "adli-bilimler"
+   ],
+   "mode": "yuzyuze",
+   "languages": [
+    "EN"
+   ],
+   "url": "https://tiaft.org/",
+   "added": "2026-11-02"
+  },
+  {
+   "id": "isfri-2027",
+   "name": "ISFRI 2027 – International Society of Forensic Radiology and Imaging Congress",
+   "theme": null,
+   "org": "International Society of Forensic Radiology and Imaging (ISFRI)",
+   "venue": "University of Southern California",
+   "city": "Los Angeles",
+   "country": "ABD",
+   "fee": null,
+   "notes": "Özet ve kayıt tarihleri resmî sayfada henüz görülmedi.",
+   "dateText": null,
+   "start": "2027-05-24",
+   "end": "2027-05-28",
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "earlyDeadline": null,
+   "type": "kongre",
+   "field": [
+    "adli-tip",
+    "adli-bilimler"
+   ],
+   "mode": "yuzyuze",
+   "languages": [
+    "EN"
+   ],
+   "url": "https://www.isfri2027.org/",
+   "added": "2026-11-02"
+  },
+  {
+   "id": "isfg-hm-2027",
+   "name": "14th Haploid Markers Conference (HM2027)",
+   "theme": null,
+   "org": "International Society for Forensic Genetics (ISFG)",
+   "venue": null,
+   "city": "Amsterdam",
+   "country": "Hollanda",
+   "fee": null,
+   "notes": "ISFG ana sayfasında duyuruldu (IALM 2027 ile aynı hafta, aynı ülke). Ayrıntılar ve resmî etkinlik sayfası doğrulanmadı.",
+   "dateText": null,
+   "start": "2027-05-24",
+   "end": "2027-05-26",
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "earlyDeadline": null,
+   "type": "kongre",
+   "field": [
+    "adli-bilimler"
+   ],
+   "mode": "yuzyuze",
+   "languages": [
+    "EN"
+   ],
+   "url": "https://isfg.org/",
+   "added": "2026-11-02"
+  },
+  {
+   "id": "waml-31-2027",
+   "name": "31st Annual World Congress for Medical Law",
+   "theme": "Patients' Rights, Autonomy and the Legal Challenges of Modern Healthcare",
+   "org": "World Association for Medical Law (WAML)",
+   "venue": null,
+   "city": "Sandton",
+   "country": "Güney Afrika",
+   "fee": null,
+   "notes": "Program ve özet bilgileri WAML sayfasında 'Program and Abstract Information 2027' bölümünde.",
+   "dateText": null,
+   "start": "2027-08-24",
+   "end": "2027-08-26",
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "earlyDeadline": "2027-05-31",
+   "type": "kongre",
+   "field": [
+    "saglik-hukuku",
+    "adli-tip"
+   ],
+   "mode": "yuzyuze",
+   "languages": [
+    "EN"
+   ],
+   "url": "https://wafml.wildapricot.org/",
+   "added": "2026-11-02"
+  },
+  {
+   "id": "asfm-14-2027",
+   "name": "14th African Society of Forensic Medicine Scientific Conference (ASFM 2027)",
+   "theme": "Forensic Medicine for Health, Safety, Justice, and Insurance Systems in Africa",
+   "org": "Zambia Medical Association / African Society of Forensic Medicine",
+   "venue": "Avani Victoria Falls Resort",
+   "city": "Livingstone",
+   "country": "Zambiya",
+   "fee": null,
+   "notes": "Özet çağrısı açık. Son tarih sayfada görülmedi.",
+   "dateText": null,
+   "start": "2027-03-01",
+   "end": "2027-03-04",
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "earlyDeadline": null,
+   "type": "kongre",
+   "field": [
+    "adli-tip"
+   ],
+   "mode": "yuzyuze",
+   "languages": [
+    "EN"
+   ],
+   "url": "https://zma.co.zm/asfm2027/",
+   "added": "2026-11-02"
+  },
+  {
+   "id": "fflm-annual-2027",
+   "name": "FFLM 20th Annual Conference 2027",
+   "theme": "Bridging the Gap",
+   "org": "Faculty of Forensic & Legal Medicine (FFLM), Royal College of Physicians",
+   "venue": "Apex Grassmarket Hotel",
+   "city": "Edinburgh",
+   "country": "Birleşik Krallık",
+   "fee": null,
+   "notes": "Erken kayıt biletleri açık (yüz yüze ve sanal). Ücret tutarları görülmedi.",
+   "dateText": null,
+   "start": "2027-05-07",
+   "end": "2027-05-08",
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "earlyDeadline": null,
+   "type": "kongre",
+   "field": [
+    "adli-tip",
+    "saglik-hukuku"
+   ],
+   "mode": "hibrit",
+   "languages": [
+    "EN"
+   ],
+   "url": "https://fflm.ac.uk/annual-conference-2027/",
+   "added": "2026-11-02"
+  },
+  {
+   "id": "bafs-18-2027",
+   "name": "18th Annual Scientific Meeting of the Balkan Academy of Forensic Sciences (BAFS 2027)",
+   "theme": null,
+   "org": "Balkan Academy of Forensic Sciences (BAFS)",
+   "venue": null,
+   "city": "Üsküp",
+   "country": "Kuzey Makedonya",
+   "fee": null,
+   "notes": "Özet son tarihi organizatörler tarafından henüz açıklanmamış.",
+   "dateText": null,
+   "start": "2027-10-07",
+   "end": "2027-10-10",
+   "abstractDeadline": null,
+   "registrationDeadline": null,
+   "earlyDeadline": null,
+   "type": "kongre",
+   "field": [
+    "adli-tip",
+    "adli-bilimler"
+   ],
+   "mode": "yuzyuze",
+   "languages": [
+    "EN"
+   ],
+   "url": "https://www.balkanacademy.org/",
+   "added": "2026-11-02"
   }
  ]
 }
